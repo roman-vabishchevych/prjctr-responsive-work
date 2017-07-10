@@ -1,10 +1,174 @@
-@font-face
-	font-family: 'Museo Sans';
-	src: url('f/museosans-100.woff') format('woff'), url('f/museosans-100.ttf') format('truetype');
-	font-weight: 100
-	font-style: normal
-
+@import '../../globals/variables'
 body
-	background green
-	font-family 'Museo Sans'
-	font-weight: 100
+	font-family 'Scada', sans-serif
+	position relative
+	font-size 16px
+	line-height (19.2/16)
+	color #333333
+	background white
+	>header
+	>main
+	>footer
+		position relative
+	>header
+		z-index 10
+	>main
+		z-index 5
+	>footer
+		z-index 1
+
+form
+	&, fieldset
+		display block
+		margin 0
+		padding 0
+		border 0 none
+		width auto
+		height auto
+
+.img-questions
+.img-gift
+	display inline-block
+
+.img-questions
+	background-image url('i/image-1.png')
+	background-size 248px 218px
+	width 248px
+	height 218px
+	margin-top -20px
+
+.img-gift
+	background-image url('i/image-3.png')
+	background-size 337px 181px
+	width 337px
+	height 181px
+
+.btn
+	border 2px solid colorBlue
+	height 60px
+	line-height @height - 4
+	border-radius (@height / 2)
+	padding 0 20px
+	text-align center
+	cursor pointer
+	background-color transparent
+	font-size 18px
+	font-weight bold
+	color #333333
+	min-width 210px
+	display inline-block
+	text-decoration none
+	&:hover
+		border-color colorOrange
+	&_down
+		&:after
+			content " "
+			margin-left 10px
+			background url('i/icon-down.svg') no-repeat top left transparent
+			display inline-block
+			width 16px
+			height 9px
+
+.discount
+	font-size 40px
+	display inline-block
+	vertical-align middle
+	font-weight bold
+	margin-right 7px
+	color colorOrange
+
+
+lh = 43px
+.super-blue
+.super-orange
+	position relative
+	color white
+	display inline-block
+	height lh
+	line-height lh
+	padding 0 4px
+	white-space nowrap
+	&:before
+	&:after
+		content " "
+		width 1px
+		height 1px
+		display block
+		border-style solid
+		position absolute
+		top 0
+	&:before
+		right 100%
+	&:after
+		left 100%
+
+h = 20px
+v = lh
+
+.super-blue
+	background colorBlue
+	&:before
+		border-width 0 0 v h
+		border-color transparent transparent colorBlue transparent
+	&:after
+		border-width v h 0 0
+		border-color colorBlue transparent transparent transparent
+
+.super-orange
+	background colorOrange
+	margin-left h
+	margin-top 6px
+	&:before
+		border-width v 0 0 h
+		border-color colorOrange transparent transparent transparent
+	&:after
+		border-width 0 h v 0 
+		border-color transparent transparent colorOrange transparent
+
+.se7ensky
+	margin-top 90px
+	a
+		text-decoration none
+		font-size 12px
+		color #000 !important
+		font-weight 600
+		text-transform uppercase
+		letter-spacing 1px
+		opacity .4
+		transition opacity .2s ease-in-out
+		&:hover
+			opacity .7
+		&:active
+			opacity 1
+	.logo7
+		background url('i/se7ensky.svg') no-repeat 0 0 transparent
+		display inline-block
+		width 117px
+		height 17px
+		vertical-align text-bottom
+		span
+			position absolute
+			visibility hidden
+			width 0
+			height 0
+.blue
+	color colorBlue
+
+.orange
+	color colorOrange
+
+.hidden-xs
+	@media phone
+		display none
+
+.text-center
+	text-align center
+
+.text-right
+	text-align right
+
+.center-block
+	display block !important
+	margin-left auto !important
+	marign-right auto !important
+	float none !important

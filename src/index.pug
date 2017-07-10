@@ -1,7 +1,97 @@
 extends layouts/main
 
 block content
-	+b.page
-		+e.H2.title Hello!
-		+e.image(src='/assets/i/logo.png' alt='Logo' style="width:200px")
+
+	mixin i(source)
+		img(src=asset('i/' + source), title='')
+
+	+b.highlight._blue
+		.container
+			.row
+				.col-sm-4.text-center: .img-questions
+				.col-sm-8.col-lg-7
+					p Занимаясь грузоперевозками у&nbsp;нас возникали вопросы. Мы&nbsp;искали ответы у&nbsp;других грузоперевозчиков и&nbsp;поняли, что&nbsp;часть вопросов возникают у&nbsp;всех. Тогда мы&nbsp;решили создать решение, в&nbsp;котором есть&nbsp;ответы на&nbsp;многие вопросы.
+
+	+b.solutions
+		.container
+			.row
+				+e.item.col-sm-6
+					.row
+						.col-xs-3.text-center: +i('icon-11.svg')
+						.col-xs-9
+							h3.blue Как не&nbsp;тратить время на&nbsp;подведение итогов и&nbsp;создание отчетов?
+							p Тратя всего 2&nbsp;минуты на&nbsp;занесение в&nbsp;программу информации о&nbsp;фрахте, вы&nbsp;получите любой отчет за&nbsp;10&nbsp;секунд.
+				+e.item.col-sm-6
+					.row
+						.col-xs-3.text-center: +i('icon-12.svg')
+						.col-xs-9
+							h3.blue Как не&nbsp;ругаться с&nbsp;водителями о&nbsp;просроченной страховке или&nbsp;МСТО?
+							p Указав на&nbsp;календаре периодичность прохождения МСТО или&nbsp;дату окончания страховки, TIR&nbsp;Менеджер напомнит вам о&nbsp;ней&nbsp;заранее.
+			.row
+				+e.item.col-sm-6
+					.row
+						.col-xs-3.text-center: +i('icon-13.svg')
+						.col-xs-9
+							h3.blue Как посмотреть нужную информацию, находясь не&nbsp;у&nbsp;компьютера?
+							p Все, что вам нужно, это иметь под&nbsp;рукой смартфон или&nbsp;планшет с&nbsp;доступом в&nbsp;интернет.
+				+e.item.col-sm-6
+					.row
+						.col-xs-3.text-center: +i('icon-14.svg')
+						.col-xs-9
+							h3.blue Как не&nbsp;путаться в&nbsp;документах для&nbsp;фрахтов и&nbsp;авто?
+							p Все документы и&nbsp;файлы хранятся там, где они нужны. Для&nbsp;фрахта вы&nbsp;просмотрите скан&nbsp;CMR или&nbsp;электронную заявку, а&nbsp;для авто&nbsp;– отсканированный техпаспорт и&nbsp;сертификат&nbsp;МСТО.
+			.row
+				+e.item.col-sm-8.center-block
+					.row
+						.col-xs-3.text-center.col-sm-2: +i('icon-15.svg')
+						.col-xs-9.col-sm-10
+							h3.blue Может в&nbsp;21 веке есть более удобные способы работы с&nbsp;фрахтами, чем табличка в&nbsp;excel или&nbsp;1c?
+							p Создавая TIR Менеджер, мы&nbsp;делали ставку на&nbsp;удобное и&nbsp;интуитивно понятное использование программы. И&nbsp;у&nbsp;нас получилось! Теперь, чтоб поддерживать порядок с&nbsp;документами и&nbsp;фрахтами, вам&nbsp;не&nbsp;нужно ставить дорогой&nbsp;1С и&nbsp;вести бесконечные таблицы Excell, теперь есть TIR&nbsp;Менеджер!
+	+b.highlight
+		.container
+			.row
+				.col-sm-6.col-sm-offset-1
+					h2
+						span.super-blue Простой и удобный
+						br
+						span.super-orange учет грузоперевозок
+					p Экономьте ваше&nbsp;время каждый день. Сэкономленные пол часа в&nbsp;день освобождают вам полтора рабочих дня каждый месяц.
+				.col-sm-5.hidden-xs: +i('image-2.svg')
+	+b.features
+		.container
+			.row.text-center
+				+e.item.col-sm-4
+					+i('icon-21.svg')
+					h3.orange Умный
+					p Быстрый поиск и&nbsp;отчеты позволят всегда видеть состояние бизнеса
+				+e.item.col-sm-4
+					+i('icon-22.svg')
+					h3.orange Всегда под рукой 
+					p TIR Менеджер работает на&nbsp;компьютерах, планшетах и&nbsp;телефонах. Используйте вариант, который подходит именно вам.
+				+e.item.col-sm-4
+					+i('icon-23.svg')
+					h3.orange Простой
+					p Вам не придется пробираться через множество таблиц и&nbsp;форм, чтобы найти&nbsp;нужные&nbsp;данные
+
+	+b.app-block
+		.container
+			+e.text
+				+e.item.row
+					.col-xs-2.text-center: +i('icon-31.svg')
+					.col-xs-10
+						h3.orange Мы экономим не&nbsp;только время, но&nbsp;и&nbsp;деньги
+						ul
+							li до трех машин в&nbsp;месяц бесплатно
+							li месяц вести машину в&nbsp;TIR Менеджер&nbsp;– по&nbsp;цене чашки хорошего кофе
+				+e.item.row
+					.col-xs-2.text-center: +i('icon-32.svg')
+					.col-xs-10
+						h3.orange TIR Менеджер создан именно для&nbsp;вас, если&nbsp;вы
+						ul
+							li малое или среднее АТП
+							li логист
+							li индивидуальный перевозчик
+		+e.image
+
+	blockquote: span Проверив всё на&nbsp;себе мы&nbsp;предлагаем решения, которые работают
 	

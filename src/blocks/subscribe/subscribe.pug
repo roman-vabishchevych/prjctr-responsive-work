@@ -1,0 +1,10 @@
+mixin b-subscribe
+	+b("form").subscribe
+		+e.description: p Оставьте свой email и узнайте первым о выходе TIR Менеджер.
+		+e("fieldset").fieldset
+			+e("label").field
+				+e("img").img(src=asset('i/image-4.svg'), title='')
+				// <input class="error ...
+				+e("input").input(type="text")
+			+e("button").submit(type="submit") Отправить
+		+e.message Спасибо! Мы свяжемся с вами.

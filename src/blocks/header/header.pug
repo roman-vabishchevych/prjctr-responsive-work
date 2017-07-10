@@ -1,3 +1,7 @@
-mixin header(siteName)
-	+b.header
-		+e('h1').title I am #{siteName}
+mixin b-header
+	+b('header').header
+		.container
+			+e.body
+				+e.logo(src=asset('i/logo.svg'))
+				+e.description Учет грузоперевозок<br>как он должен быть
+				+e.button: a.btn.btn_down(href="#subscribe") Подписаться

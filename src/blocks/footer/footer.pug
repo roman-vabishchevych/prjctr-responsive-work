@@ -1,3 +1,15 @@
-mixin footer
-	.footer
-		h3 I am footer
+mixin b-footer
+	+b('footer').footer#subscribe
+		.container
+			+e.head
+				| Первые 100 подписчиков получат пожизненную скидку
+				br
+				span.discount 50%
+				| на&nbsp;использование 
+				strong TIR&nbsp;Менеджер.
+			+e.body
+				.img-gift
+			
+			+e.form
+				//when form is sent add class "subscribe_sent" – <form class="subscribe subscribe_sent" ...
+				+b-subscribe
